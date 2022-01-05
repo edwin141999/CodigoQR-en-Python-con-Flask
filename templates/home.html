@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block content%}
+<div class="row justify-content-center">
+    <div class="col-md-auto form-group">
+        <br><h2 class="text-center">Insertar URL</h2>
+        <form action="{{url_for('enviar')}}" method="post" class="was-validated">
+            <input type="url" name="link" placeholder="Inserta el texto aqui" autocomplete="off" class="form-control" required>
+            <!--Validaciones-->
+            <div class="valid-feedback text-white text-center">URL valido</div>
+            <div class="invalid-feedback text-white text-center">Por favor ingrese una URL</div>
+            <!--Validaciones-->
+            <h2 class="text-center">Agregar Logo</h2>
+            <div class="row g-3">
+                <span class="text-center">(opcional)</span>
+                <div class="col-md-12">
+                    <input type="file" name="logo" autocomplete="off" class="form-control" accept="image/png, image/gif, image/jpeg" >
+                </div>
+            </div>
+              <br>
+            <div class="d-flex justify-content-center">
+                <button type="submit" class="btn btn-primary btn-lg" id='btnDownload'>Descargar</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock%}
