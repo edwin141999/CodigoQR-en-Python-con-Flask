@@ -1,6 +1,6 @@
 click==8.0.3 #this
 Flask==2.0.2 #this
-gunicorn==20.1.0# this
+gunicorn==20.1.0
 itsdangerous==2.0.1#this
 Jinja2==3.0.1#this
 MarkupSafe==2.0.1#this
