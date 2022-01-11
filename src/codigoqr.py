@@ -4,15 +4,15 @@ from PIL import Image
 
 app = Flask(__name__)
 
-
 @app.route("/", methods=["POST", "GET"])
 def enviar():
     if request.method == "POST":
         link = request.form.get("link")
         imglogo = request.form.get("logo")
+        im = request.files['logo']
         urlimg = "./static/images/myOwnCodeQR.jpg"
-        if imglogo != "":
-            logo = Image.open(imglogo)
+        if imglogo != '' != None and im.filename != '':
+            logo = Image.open(request.files['logo'])
             basewidth = 120
             wpercent = basewidth / float(logo.size[0])
             hsize = int((float(logo.size[1]) * float(wpercent)))
