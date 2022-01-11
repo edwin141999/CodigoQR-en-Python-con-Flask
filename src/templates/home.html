@@ -4,7 +4,7 @@
 <div class="row justify-content-center">
     <div class="col-md-auto form-group">
         <br><h2 class="text-center">Insertar URL</h2>
-        <form action="{{url_for('enviar')}}" method="post" class="was-validated">
+        <form action="{{url_for('enviar')}}" method="post" class="was-validated" enctype="multipart/form-data">
             <input type="url" name="link" placeholder="Inserta el texto aqui" autocomplete="off" class="form-control" required>
             <!--Validaciones-->
             <div class="valid-feedback text-white text-center">URL valido</div>
